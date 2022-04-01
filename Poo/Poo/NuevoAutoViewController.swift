@@ -15,6 +15,9 @@ class NuevoAutoViewController: UIViewController {
     
     @IBOutlet weak var buttonCrear: UIButton!
     
+    var delegate: NuevoAutoViewControllerDelegate?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,17 +35,27 @@ class NuevoAutoViewController: UIViewController {
 
     }
     @IBAction func buttonCrearAction(_ sender: Any) {
-        let auto = Automovil(modelo: modeloTextField.text!, color: colorTextField.text!, precio: Double(precioTextField.text!)!)
-        
-        let vc = ViewController()
-        vc.autos.append(auto)
-        print(vc.autos)
+        if camposLlenados() {
+            let auto = Automovil(modelo: modeloTextField.text!, color: colorTextField.text!, precio: Double(precioTextField.text!)!)
+            
+            
+            self.delegate?.nuevoAuto(auto: auto)
+    //        dismiss(animated: true, completion: nil)
+            _ = navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func camposLlenados() -> Bool {
+        if (modeloTextField.text != "" && colorTextField.text != "" && precioTextField.text != ""){
+            return true
+        }
+        return false
     }
 }
 
 extension NuevoAutoViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        return textField.resignFirstResponder()
     }
 }
 
@@ -62,6 +75,7 @@ extension UITextField{
 
     doneToolbar.items = items
     doneToolbar.sizeToFit()
+     
 
     self.inputAccessoryView = doneToolbar
  }
@@ -74,4 +88,8 @@ class PastelessTextField: UITextField {
         && (action == #selector(UIResponderStandardEditActions.cut)
         || action == #selector(UIResponderStandardEditActions.copy))
     }
+}
+
+protocol NuevoAutoViewControllerDelegate {
+  func nuevoAuto(auto: Automovil)
 }

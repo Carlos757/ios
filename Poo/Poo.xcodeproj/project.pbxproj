@@ -16,6 +16,7 @@
 		4FEC763327F3F530000E548F /* Automovil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC763227F3F530000E548F /* Automovil.swift */; };
 		4FEC763727F40234000E548F /* NuevoAutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC763627F40234000E548F /* NuevoAutoViewController.swift */; };
 		4FEC763927F4104E000E548F /* AutosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC763827F4104E000E548F /* AutosTableViewController.swift */; };
+		4FEC763B27F693BA000E548F /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEC763A27F693BA000E548F /* SimpleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4FEC763227F3F530000E548F /* Automovil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automovil.swift; sourceTree = "<group>"; };
 		4FEC763627F40234000E548F /* NuevoAutoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoAutoViewController.swift; sourceTree = "<group>"; };
 		4FEC763827F4104E000E548F /* AutosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosTableViewController.swift; sourceTree = "<group>"; };
+		4FEC763A27F693BA000E548F /* SimpleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				4FEC761E27F3F4EA000E548F /* AppDelegate.swift */,
 				4FEC762027F3F4EA000E548F /* SceneDelegate.swift */,
 				4FEC762227F3F4EA000E548F /* ViewController.swift */,
+				4FEC763A27F693BA000E548F /* SimpleViewController.swift */,
 				4FEC763627F40234000E548F /* NuevoAutoViewController.swift */,
 				4FEC763827F4104E000E548F /* AutosTableViewController.swift */,
 				4FEC763227F3F530000E548F /* Automovil.swift */,
@@ -152,6 +155,7 @@
 				4FEC763927F4104E000E548F /* AutosTableViewController.swift in Sources */,
 				4FEC763727F40234000E548F /* NuevoAutoViewController.swift in Sources */,
 				4FEC763327F3F530000E548F /* Automovil.swift in Sources */,
+				4FEC763B27F693BA000E548F /* SimpleViewController.swift in Sources */,
 				4FEC762127F3F4EA000E548F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
